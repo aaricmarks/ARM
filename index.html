@@ -3,15 +3,18 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>ARM</title>
+    <title>Dark Theme Website</title>
     <link rel="stylesheet" href="styles.css">
 </head>
 <body>
     <header>
         <nav>
-            <img src="LOGO.svg" alt="ARM Logo" class="logo">
+            <!-- SVG Logo -->
+            <div class="logo">
+                <img src="LOGO.svg" alt="Logo" class="logo-img">
+            </div>
             <ul>
-                <li><a href="#work">Work</a></li>
+                <li><a href="#home">Home</a></li>
                 <li><a href="#about">About</a></li>
                 <li><a href="#contact">Contact</a></li>
             </ul>
@@ -20,25 +23,28 @@
 
     <main>
         <section class="hero">
-            <h1>Creative Solutions</h1>
-            <p>Building digital experiences that matter</p>
-        </section>
-
-        <section id="work" class="work-grid">
-            <article class="work-item">
-                <img src="project1.jpg" alt="Project 1">
-                <h3>Project One</h3>
-            </article>
-            <article class="work-item">
-                <img src="project2.jpg" alt="Project 2">
-                <h3>Project Two</h3>
-            </article>
-            <!-- Add more work items as needed -->
+            <h1>Welcome to Our Site</h1>
+            <!-- PDF Display Options -->
+            <!-- Option 1: Direct PDF embed -->
+            <div class="pdf-container">
+                <object 
+                    data="IMG_1061.pdf" 
+                    type="application/pdf"
+                    class="pdf-content">
+                    <p>It appears you don't have a PDF plugin for this browser. 
+                    No worries! You can <a href="IMG_1061.pdf">click here to download the PDF file.</a></p>
+                </object>
+            </div>
+            
+            <!-- Option 2: If PDF is converted to image -->
+            <!-- <div class="image-container">
+                <img src="IMG_1061.jpg" alt="Main Image" class="main-image">
+            </div> -->
         </section>
     </main>
 
     <footer>
-        <p>&copy; 2025 ARM. All rights reserved.</p>
+        <p>&copy; 2025 Your Company. All rights reserved.</p>
     </footer>
 </body>
 </html>
