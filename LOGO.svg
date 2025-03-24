@@ -1,0 +1,65 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 400 400">
+  <defs>
+    <style>
+      @keyframes spin {
+        0% { transform: rotateY(0deg); }
+        100% { transform: rotateY(360deg); }
+      }
+      
+      .masonic-symbol {
+        transform-origin: center;
+        animation: spin 8s linear infinite;
+        transform-style: preserve-3d;
+      }
+      
+      .shadow {
+        filter: drop-shadow(0px 4px 6px rgba(0, 0, 0, 0.3));
+      }
+    </style>
+  </defs>
+  
+  <rect width="400" height="400" fill="white"/>
+  
+  <g class="masonic-symbol shadow" transform-origin="200 200">
+    <!-- Square -->
+    <g stroke="black" stroke-width="2" fill="none">
+      <path d="M100,260 L300,260 L300,280 L100,280 Z" />
+      <path d="M100,260 L100,280" />
+      <path d="M300,260 L300,280" />
+      
+      <!-- Left ruler markings -->
+      <path d="M120,260 L120,270" />
+      <path d="M140,260 L140,275" />
+      <path d="M160,260 L160,270" />
+      <path d="M180,260 L180,275" />
+      <path d="M200,260 L200,270" />
+      
+      <!-- Right ruler markings -->
+      <path d="M220,260 L220,270" />
+      <path d="M240,260 L240,275" />
+      <path d="M260,260 L260,270" />
+      <path d="M280,260 L280,275" />
+    </g>
+    
+    <!-- Compass -->
+    <g stroke="black" stroke-width="2" fill="none">
+      <circle cx="200" cy="130" r="20" />
+      <path d="M200,150 L120,260" />
+      <path d="M200,150 L280,260" />
+    </g>
+    
+    <!-- ATSUO text inside circle -->
+    <g transform="translate(200, 130)">
+      <text text-anchor="middle" dominant-baseline="central" font-family="Arial" font-size="10" font-weight="bold" fill="black">ATSUO</text>
+    </g>
+    
+    <!-- AA letters (rotated 180 degrees and lowered) -->
+    <g transform="translate(200, 230) rotate(180)">
+      <!-- First A -->
+      <path d="M-20,20 L-10,-10 L0,20 M-15,10 L-5,10" fill="none" stroke="black" stroke-width="3"/>
+      
+      <!-- Second A (connected) -->
+      <path d="M0,20 L10,-10 L20,20 M5,10 L15,10" fill="none" stroke="black" stroke-width="3"/>
+    </g>
+  </g>
+</svg>
