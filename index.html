@@ -3,58 +3,68 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>ARM Images</title>
+    <title>ARM Website</title>
     <style>
+        /* Reset default styles */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
         body {
-            display: flex;
-            flex-direction: column;
-            align-items: center;
-            gap: 20px;
-            padding: 20px;
             font-family: Arial, sans-serif;
+            line-height: 1.6;
+            padding: 20px;
+            max-width: 1200px;
+            margin: 0 auto;
         }
-        .image-container {
-            max-width: 800px;
-            width: 100%;
+
+        /* Header styles */
+        header {
             text-align: center;
+            padding: 20px 0;
         }
-        img, embed, object {
-            max-width: 100%;
+
+        .logo {
+            max-width: 200px;
             height: auto;
         }
-        .pdf-container {
+
+        /* Main content styles */
+        main {
+            margin-top: 40px;
+        }
+
+        .main-image {
             width: 100%;
-            height: 600px;
-            border: 1px solid #ccc;
-            border-radius: 4px;
-            overflow: hidden;
+            max-width: 800px;
+            height: auto;
+            display: block;
+            margin: 0 auto;
+            border-radius: 8px;
+            box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+        }
+
+        /* Responsive design */
+        @media (max-width: 768px) {
+            body {
+                padding: 10px;
+            }
+
+            .logo {
+                max-width: 150px;
+            }
         }
     </style>
 </head>
 <body>
-    <div class="image-container">
-        <img src="LOGO.svg" alt="Logo">
-    </div>
-    <div class="image-container">
-        <div class="pdf-container">
-            <!-- Primary method using object -->
-            <object
-                data="IMG_1061.pdf"
-                type="application/pdf"
-                width="100%"
-                height="100%">
-                <!-- Fallback using embed -->
-                <embed
-                    src="IMG_1061.pdf"
-                    type="application/pdf"
-                    width="100%"
-                    height="100%">
-                    <!-- Final fallback for browsers that don't support PDF embedding -->
-                    <p>Your browser does not support embedded PDFs. 
-                       <a href="IMG_1061.pdf">Click here to view the PDF directly.</a>
-                    </p>
-            </object>
-        </div>
-    </div>
+    <header>
+        <img src="LOGO.svg" alt="ARM Logo" class="logo">
+    </header>
+    
+    <main>
+        <img src="IMG_1061.jpeg" alt="Main Image" class="main-image">
+    </main>
 </body>
 </html>
