@@ -3,48 +3,88 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Dark Theme Website</title>
-    <link rel="stylesheet" href="styles.css">
+    <title>ARM Portfolio</title>
+    <style>
+        /* Minimalist styling */
+        body {
+            margin: 0;
+            padding: 0;
+            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, sans-serif;
+            background-color: #fafafa;
+            color: #333;
+        }
+
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 2rem;
+        }
+
+        .header {
+            text-align: center;
+            margin-bottom: 4rem;
+        }
+
+        .logo {
+            max-width: 200px;
+            height: auto;
+            margin-bottom: 2rem;
+        }
+
+        .content {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 2rem;
+        }
+
+        .image-container {
+            background: white;
+            padding: 1rem;
+            border-radius: 8px;
+            box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+            transition: transform 0.2s ease;
+        }
+
+        .image-container:hover {
+            transform: translateY(-5px);
+        }
+
+        .image-container img, 
+        .image-container object {
+            width: 100%;
+            height: auto;
+            border-radius: 4px;
+        }
+
+        .caption {
+            margin-top: 1rem;
+            text-align: center;
+            font-size: 0.9rem;
+            color: #666;
+        }
+    </style>
 </head>
 <body>
-    <header>
-        <nav>
-            <!-- SVG Logo -->
-            <div class="logo">
-                <img src="LOGO.svg" alt="Logo" class="logo-img">
-            </div>
-            <ul>
-                <li><a href="#home">Home</a></li>
-                <li><a href="#about">About</a></li>
-                <li><a href="#contact">Contact</a></li>
-            </ul>
-        </nav>
-    </header>
+    <div class="container">
+        <header class="header">
+            <img src="LOGO.svg" alt="ARM Logo" class="logo">
+            <h1>ARM Portfolio</h1>
+        </header>
 
-    <main>
-        <section class="hero">
-            <h1>Welcome to Our Site</h1>
-            <!-- PDF Display Options -->
-            <!-- Option 1: Direct PDF embed -->
-            <div class="pdf-container">
-                <object 
-                    data="IMG_1061.pdf" 
-                    type="application/pdf"
-                    class="pdf-content">
+        <main class="content">
+            <div class="image-container">
+                <object data="IMG_1061.pdf" type="application/pdf" width="100%" height="500px">
                     <p>It appears you don't have a PDF plugin for this browser. 
-                    No worries! You can <a href="IMG_1061.pdf">click here to download the PDF file.</a></p>
+                    You can <a href="IMG_1061.pdf">click here to download the PDF file.</a></p>
                 </object>
+                <p class="caption">Portfolio Document</p>
             </div>
-            
-            <!-- Option 2: If PDF is converted to image -->
-            <!-- <div class="image-container">
-                <img src="IMG_1061.jpg" alt="Main Image" class="main-image">
-            </div> -->
-        </section>
-    </main>
 
-    <footer>
-        <p>&copy; 2025 Your Company. All rights reserved.</p>
-    </footer>
+            <div class="image-container">
+                <img src="LOGO.svg" alt="ARM Logo" />
+                <p class="caption">Brand Logo</p>
+            </div>
+        </main>
+    </div>
 </body>
 </html>
