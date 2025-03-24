@@ -4,56 +4,41 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>ARM</title>
-    <style>
-        body {
-            font-family: Arial, sans-serif;
-            max-width: 800px;
-            margin: 0 auto;
-            padding: 20px;
-            line-height: 1.6;
-        }
-        
-        .logo {
-            max-width: 200px;
-            height: auto;
-            display: block;
-            margin: 20px 0;
-        }
-        
-        .pdf-link {
-            display: inline-block;
-            padding: 10px 20px;
-            background-color: #0366d6;
-            color: white;
-            text-decoration: none;
-            border-radius: 5px;
-            margin: 20px 0;
-        }
-        
-        .pdf-link:hover {
-            background-color: #024ea4;
-        }
-        
-        .container {
-            background-color: #f6f8fa;
-            padding: 20px;
-            border-radius: 5px;
-            margin: 20px 0;
-        }
-    </style>
+    <link rel="stylesheet" href="styles.css">
 </head>
 <body>
-    <!-- Logo -->
-    <img src="LOGO.svg" alt="ARM Logo" class="logo">
-    
-    <!-- README Content -->
-    <div class="container">
-        <h1>Simple Landing Page</h1>
-    </div>
-    
-    <!-- PDF Link -->
-    <a href="IMG_1061.pdf" class="pdf-link" download>
-        Download PDF
-    </a>
+    <header>
+        <nav>
+            <img src="LOGO.svg" alt="ARM Logo" class="logo">
+            <ul>
+                <li><a href="#work">Work</a></li>
+                <li><a href="#about">About</a></li>
+                <li><a href="#contact">Contact</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main>
+        <section class="hero">
+            <h1>Creative Solutions</h1>
+            <p>Building digital experiences that matter</p>
+        </section>
+
+        <section id="work" class="work-grid">
+            <article class="work-item">
+                <img src="project1.jpg" alt="Project 1">
+                <h3>Project One</h3>
+            </article>
+            <article class="work-item">
+                <img src="project2.jpg" alt="Project 2">
+                <h3>Project Two</h3>
+            </article>
+            <!-- Add more work items as needed -->
+        </section>
+    </main>
+
+    <footer>
+        <p>&copy; 2025 ARM. All rights reserved.</p>
+    </footer>
 </body>
 </html>
